@@ -9,6 +9,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
 
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -37,8 +38,8 @@ public class App extends Application {
     public void start(Stage primaryStage) {
         javafx.scene.control.Button startButton = new javafx.scene.control.Button("START");
         TextField nInput = new TextField();
-        HBox hBox = new HBox(nInput, startButton);
-        Scene scene0 = new Scene(hBox, 800, 800);
+        HBox hBox = new HBox(new Label("Give value of n: "),nInput, startButton);
+        Scene scene0 = new Scene(hBox, 300, 100);
         primaryStage.setScene(scene0);
         primaryStage.show();
         startButton.setOnAction(event -> {
