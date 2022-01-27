@@ -22,10 +22,8 @@ public class Function {
 
     public void setFormula(int functionIntervalId, int wantedIntervalId) {
         if (functionIntervalId == wantedIntervalId) {
-            double i = wantedIntervalId/h;
             functionFormula = new PolynomialFunction(new double[]{1 - functionIntervalId, 1/h});
         } else if (functionIntervalId + 1 == wantedIntervalId) {
-            double i = wantedIntervalId/h - 1;
             functionFormula = new PolynomialFunction(new double[]{1 + functionIntervalId, -1/h});
         } else {
             functionFormula = new PolynomialFunction(new double[]{0});
